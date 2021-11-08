@@ -1,0 +1,120 @@
+:root {
+  --sidebar-width: 11.5rem;
+}
+
+[data-id="main"] {
+  padding-top: 0px;
+  padding-right: 16px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  font-size: 0.8rem;
+  float: left;
+}
+
+h1 {
+  text-transform: capitalize;
+  color: rgb(32, 53, 104);
+  font-weight: 600;
+}
+
+.aside h2 {
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgb(32, 53, 104);
+}
+
+.aside {
+  background-color: rgb(255, 227, 200);
+  padding-top: 0px;
+  padding-right: 7px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  font-size: 0.8rem;
+  float: left;
+  float: left;
+}
+
+[data-id="disclaimer"] {
+  position: absolute;
+  bottom: 0;
+  right: var(--sidebar-horizontal-padding);
+  font-size: 0.75rem;
+  font-style: italic;
+  line-height: 1;
+  color: #777;
+  padding-left: 15px;
+  margin-right: -15px;
+  text-align: left;
+}
+
+a {
+  color: rgb(211, 88, 49);
+
+}
+
+.aside .level2 {
+  margin-top: 0.3in;
+}
+
+.pagedjs_page:first-of-type {
+  --sidebar-background-color: rgb(255, 227, 200);
+}
+
+.pagedjs_page:not(:first-of-type) {
+  --sidebar-background-color: rgb(255, 227, 200);
+  --sidebar-width: 2rem;
+  --main-width: calc(var(--content-width) - var(--sidebar-width));
+  --pagedjs-margin-top: 0.5in;
+}
+
+.pagedjs_page {
+  --pagedjs-margin-right: 0.25in;
+  --pagedjs-margin-top: 0.7in;
+}
+
+#overlay {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #ffffff;
+}
+
+#spinner {
+  display: block;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  z-index: 101;
+  background-color: #3498db;
+
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  } 100% {
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}

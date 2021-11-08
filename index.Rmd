@@ -1,0 +1,152 @@
+---
+title: "Vincent's CV"
+author: Vincent Bellavance
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    css: ['css/styles.css', 'resume', 'https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css']
+    self_contained: true
+    includes: 
+      after_body: ["assets/preloader.js", "assets/google-analytics.js"]
+---
+
+```{r, include=FALSE, cache = F}
+knitr::opts_chunk$set(
+  results='asis',
+  echo = FALSE
+)
+
+library(glue)
+library(tidyverse)
+
+
+# Holds all the links that were inserted for placement at the end
+PDF_EXPORT <- FALSE
+
+source('R/parsing_functions.R')
+
+# Load csv with position info
+position_data <- readr::read_csv('data/positions.csv')
+```
+
+<!-- Preload divs -->
+<div id="overlay"></div>
+<div id="spinner"></div>
+
+
+Aside
+================================================================================
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+- <i class="fa fa-envelope"></i> vincent.bellavance.92@gmail.com
+- <i class="fa fa-twitter"></i> [V_Bellavance](https://twitter.com/v_bellavance)
+- <i class="fa fa-github"></i> [VincentBellavance](https://github.com/VincentBellavance)
+- <i class="fa fa-globe"></i> [In progress]()
+<!-- - <i class="ai ai-google-scholar"></i> [Publications](https://scholar.google.com/citations?user=GyChlIoAAAAJ&hl=en)-->
+- <i class="ai ai-orcid"></i> [0000-0002-3263-8784](https://orcid.org/0000-0002-3263-8784)
+
+
+Quantitative skills
+------------------------------------
+
+Regression, Mathematical modelling, Random Forest, Hierarchical models, Bayesian statistics
+
+
+Programming skills
+------------------------------------
+
+<span style="font-weight:600;">Data analysis</span>: R<br>
+
+<span style="font-weight:600;">Database</span>: PostgreSQL<br>
+
+<span style="font-weight:600;">Automation/reports</span>: <br>markdown, LaTeX, bash,<br> makefile<br> 
+
+<span style="font-weight:600;">Web</span>: HTML/CSS, ShinyApp<br>
+
+<span style="font-weight:600;">DevOps (CI/CD)</span>: Git, Docker, GitHub Actions
+
+
+Languages
+------------------------------------
+
+**French**<span style="font-size:11px;"> Native</span><br>
+**English**<span style="font-size:11px;"> Full Professional</span><br>
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Made with [**pagedown**](https://github.com/rstudio/pagedown).
+
+The source code is available at [github.com/VincentBellavance/cv](https://github.com/VincentBellavance/cv).
+
+Last updated on `r Sys.Date()`.
+
+[<i class='fas fa-download'></i> Download a PDF of this CV](https://VincentBellavance.github.io/cv/VincentBellavance.pdf)
+
+
+Main
+================================================================================
+
+ <span style="font-weight:600">Vincent Bellavance</span> <span style="font-size: 13px;">Master student</span>{#title}
+--------------------------------------------------------------------------------
+
+
+<span style="font-size: 1rem;">< <i class="fa fa-chart-bar"></i> + <i class="fa fa-robot"></i> >  Aspiring Quantitative ecologist | Eco-informatician | Data scientist </span>
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'education')
+```
+
+
+
+Research Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'research_positions')
+```
+
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'teaching_positions')
+```
+
+Training {data-icon=certificate}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'training')
+```
+
+
+Publications {data-icon=book}
+--------------------------------------------------------------------------------
+
+
+```{r, warning = FALSE,message = FALSE}
+myORCID <- '0000-0002-3263-8784'
+underlineName <- 'Bellavance, V.'
+
+# get edited publications from ORCID id
+pubs <- get_publications(myORCID, underlineName)
+
+print_publications(pubs)
+```
+
+
+Selected Talks and Posters {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'talk_poster')
+```
