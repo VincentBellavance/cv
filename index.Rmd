@@ -134,13 +134,13 @@ Publications {data-icon=book}
 
 
 ```{r, warning = FALSE,message = FALSE}
-myORCID <- '0000-0002-3263-8784'
-underlineName <- 'Bellavance, V.'
-
-# get edited publications from ORCID id
-pubs <- get_publications(myORCID, underlineName)
-
-print_publications(pubs)
+#myORCID <- '0000-0002-3263-8784'
+#underlineName <- 'Bellavance, V.'
+#
+## get edited publications from ORCID id
+#pubs <- get_publications(myORCID, underlineName)
+#
+#print_publications(pubs)
 ```
 
 
