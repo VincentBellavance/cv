@@ -128,7 +128,7 @@ Training {data-icon=certificate}
 print_section(position_data, 'training')
 ```
 
-
+<!--
 Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
@@ -148,5 +148,6 @@ Selected Talks and Posters {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ```{r}
-print_section(position_data, 'talk_poster')
+#print_section(position_data, 'talk_poster')
 ```
+-->
