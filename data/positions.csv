@@ -9,7 +9,7 @@ research_positions,TRUE,Undergraduate Researcher,Integrative Ecology Lab - Unive
 research_positions,TRUE,Research Professional,Integrative Ecology Lab - Université de Sherbrooke,"Sherbrooke, Canada",2019,2019,From January to May and August to December,Database management | Data cleaning | Taxonomic validation,
 teaching_positions,TRUE,Shiny workshop,[Introduction to Shiny Apps](https://bios2.github.io/posts/2021-06-22-introduction-to-shiny-apps/) - BIOS²,"Sherbrooke, Canada",2021,2021,Workshop instructor,,
 teaching_positions,TRUE,Introduction to scientific programmation,"[BIO109](https://github.com/EcoNumUdS/BIO109) - Département de biologie, Université de Sherbrooke","Sherbrooke, Canada",2021,2021,Teaching assistant,,
-training,TRUE,BIOS² Internship,[Observatoire d'oiseaux de Tadoussac](http://www.explosnature.ca/oot/) - Explos-Nature,Grandes-Bergeronnes,2021,2021,Start creating a PSQL database for the for the boreal owl monitoring program data,Start a R Package to make query on the database,
+training,TRUE,BIOS² Internship,[Observatoire d'oiseaux de Tadoussac](http://www.explosnature.ca/oot/) - Explos-Nature,Grandes-Bergeronnes,2021,2021,Design a database to inject data on boreal owls banding,Make a R package to communicate with the database,
 training,TRUE,Building R Packages,Workshop - BIOS²,"Sherbrooke, Canada",2021,2021,Functions | Writing tests and documentation | Share package on github,,
 training,TRUE,Training in Spatial Statistics,Workshop - BIOS²,"Sherbrooke, Canada",2021,2021,Point pattern analysis | Spatial correlation | Geostatistical models | Analysis of areal data,,
 training,TRUE,Making Websites with HUGO,Workshop - BIOS²,"Sherbrooke, Canada",2020,2020,"General introduction to HUGO, a popular open source framework for building websites",,
@@ -17,3 +17,4 @@ training,TRUE,Data Visualization,Workshop - BIOS²,"Sherbrooke, Canada",2020,202
 training,TRUE,Science Communication,Workshop - BIOS²,"Sherbrooke, Canada",2020,2020,Concept and tools that contribute to effective science communication,,
 training,TRUE,First Steps on Compute Clusters,Short course - Calcul Quebec - Compute Canada,"Sherbrooke, Canada",2020,2020,How to use supercomputer | Tools to carry out first computations correctly and efficiently,,
 training,TRUE,Biodiversity Modelling Summer School,Workshop - BIOS²,"Sherbrooke, Canada",2021,2021,Probabilities | Maximum likelihood | Bayesian modelling | Algorithms and computational methods,,
+training,TRUE,Discussion group on Joint Species Distribution Models,Université de Sherbrooke,"Sherbrooke, Canada",2021,2021,Based on: [Joint Species Distribution Modelling With Applications in R](https://www.cambridge.org/core/books/joint-species-distribution-modelling/0D9FA93EA1DD408332A17266449668B3),,

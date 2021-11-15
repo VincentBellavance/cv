@@ -1,5 +1,5 @@
 :root {
-  --sidebar-width: 11.5rem;
+  --sidebar-width: 4rem;
 }
 
 [data-id="main"] {
@@ -49,27 +49,22 @@ h1 {
 
 a {
   color: rgb(211, 88, 49);
-
 }
 
 .aside .level2 {
-  margin-top: 0.3in;
+  margin-top: 0.05in;
 }
 
-.pagedjs_page:first-of-type {
+.pagedjs_first_page {
   --sidebar-background-color: rgb(255, 227, 200);
-}
-
-.pagedjs_page:not(:first-of-type) {
-  --sidebar-background-color: rgb(255, 227, 200);
-  --sidebar-width: 2rem;
-  --main-width: calc(var(--content-width) - var(--sidebar-width));
-  --pagedjs-margin-top: 0.5in;
+  --sidebar-width: 12rem;
+  --main-width: calc(var(--content-width) - var(--sidebar-width)) !important;
+  --pagedjs-margin-top: 0.9in ! important;
 }
 
 .pagedjs_page {
-  --pagedjs-margin-right: 0.25in;
-  --pagedjs-margin-top: 0.7in;
+  --pagedjs-margin-right: 0.05in !important;
+  --sidebar-background-color: rgb(255, 227, 200);
 }
 
 #overlay {
@@ -82,22 +77,6 @@ a {
   right: 0;
   z-index: 100;
   background: #ffffff;
-}
-
-#spinner {
-  display: block;
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  top: 50%;
-  left: 50%;
-  margin-top: -20px;
-  margin-left: -20px;
-  z-index: 101;
-  background-color: #3498db;
-
-  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
-  animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
 
 @-webkit-keyframes sk-rotateplane {
@@ -117,4 +96,10 @@ a {
       transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
       -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
+}
+
+.fa-gmail {
+  content: url('../assets/images/gmail.svg');
+  height: 1em;
+  width: auto;
 }
