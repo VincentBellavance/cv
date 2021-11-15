@@ -36,7 +36,7 @@ Aside
 Contact {#contact}
 --------------------------------------------------------------------------------
 
-- <i class="fa fa-gmail"></i> [Vincent.Bellavance.92](Vincent.Bellavance.92@gmail.com)
+- <i class="fa fa-gmail"></i> <a href="mailto:Vincent.Bellavance.92@gmail.com">Vincent.Bellavance.92</a>
 - <i class="fa fa-twitter"></i> [V_Bellavance](https://twitter.com/v_bellavance)
 - <i class="fa fa-github"></i> [VincentBellavance](https://github.com/VincentBellavance)
 - <i class="fa fa-globe"></i> [In progress]()
