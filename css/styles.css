@@ -24,7 +24,7 @@ h1 {
 }
 
 .aside {
-  background-color: rgb(255, 227, 200);
+  background-color: rgba(255, 227, 200, 0);
   padding-top: 0px;
   padding-right: 7px;
   padding-bottom: 0px;
