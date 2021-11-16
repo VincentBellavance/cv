@@ -39,7 +39,7 @@ Contact {#contact}
 - <i class="fa fa-gmail"></i> <a href="mailto:Vincent.Bellavance.92@gmail.com">Vincent.Bellavance.92</a>
 - <i class="fa fa-twitter"></i> [V_Bellavance](https://twitter.com/v_bellavance)
 - <i class="fa fa-github"></i> [VincentBellavance](https://github.com/VincentBellavance)
-- <i class="fa fa-globe"></i> In progress
+<!-- - <i class="fa fa-globe"></i> -->
 <!-- - <i class="ai ai-google-scholar"></i> [Publications](https://scholar.google.com/citations?user=GyChlIoAAAAJ&hl=en)-->
 - <i class="ai ai-orcid"></i> [0000-0002-3263-8784](https://orcid.org/0000-0002-3263-8784)
 
@@ -48,7 +48,7 @@ Contact {#contact}
 Quantitative skills
 ------------------------------------
 
-Regression, Mathematical modelling, Random Forest, Hierarchical models, Bayesian statistics
+Regression, Mathematical modelling, Random Forest, Hierarchical models, Bayesian statistics, Species distribution models
 
 <br>
 
@@ -61,7 +61,7 @@ Programming
 
 <span style="font-weight:600;">Automation/reports</span>: <br>markdown, LaTeX, bash,<br> GNU make<br>
 
-<span style="font-weight:600;">Web</span>: HTML/CSS, ShinyApp<br>
+<span style="font-weight:600;">Web</span>: HTML/CSS, ShinyApp,<br>
 
 <span style="font-weight:600;">DevOps (CI/CD)</span>: Git, Docker, GitHub Actions
 
