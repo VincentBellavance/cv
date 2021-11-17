@@ -13,14 +13,22 @@
 
 h1 {
   text-transform: capitalize;
-  color: rgb(32, 53, 104);
+  color: #2B2D2F;
   font-weight: 600;
 }
 
 .aside h2 {
   font-weight: 500;
   font-size: 1rem;
-  color: rgb(32, 53, 104);
+  color: #FFFFFFFF;
+}
+
+.aside p {
+  color: #FFFFFFFF;
+}
+
+.aside a {
+  color: rgb(255, 247, 180) !important;
 }
 
 .aside {
@@ -48,7 +56,8 @@ h1 {
 }
 
 a {
-  color: rgb(211, 88, 49);
+  color: #1DA1F2;
+  font-weight: 475;
 }
 
 .aside .level2 {
@@ -56,7 +65,7 @@ a {
 }
 
 .pagedjs_first_page {
-  --sidebar-background-color: rgba(255, 227, 200);
+  --sidebar-background-color: #2B2D2F;
   --sidebar-width: 12rem;
   --main-width: calc(var(--content-width) - var(--sidebar-width)) !important;
   --pagedjs-margin-top: 0.9in ! important;
@@ -64,7 +73,7 @@ a {
 
 .pagedjs_page {
   --pagedjs-margin-right: 0.05in !important;
-  --sidebar-background-color: rgb(255, 227, 200);
+  --sidebar-background-color: #2B2D2F;
 }
 
 #overlay {

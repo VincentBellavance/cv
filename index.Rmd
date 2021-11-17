@@ -37,11 +37,11 @@ Contact {#contact}
 --------------------------------------------------------------------------------
 
 - <i class="fa fa-gmail"></i> <a href="mailto:Vincent.Bellavance.92@gmail.com">Vincent.Bellavance.92</a>
-- <i class="fa fa-twitter"></i> [V_Bellavance](https://twitter.com/v_bellavance)
-- <i class="fa fa-github"></i> [VincentBellavance](https://github.com/VincentBellavance)
+- <i class="fa fa-twitter" style="color:#1DA1F2;"></i> [V_Bellavance](https://twitter.com/v_bellavance)
+- <i class="fa fa-github" style="color:#FFFFFF;"></i> [VincentBellavance](https://github.com/VincentBellavance)
 <!-- - <i class="fa fa-globe"></i> -->
 <!-- - <i class="ai ai-google-scholar"></i> [Publications](https://scholar.google.com/citations?user=GyChlIoAAAAJ&hl=en)-->
-- <i class="ai ai-orcid"></i> [0000-0002-3263-8784](https://orcid.org/0000-0002-3263-8784)
+- <i class="ai ai-orcid" style="color:#a9c518;"></i> [0000-0002-3263-8784](https://orcid.org/0000-0002-3263-8784)
 
 <br>
 
@@ -83,7 +83,7 @@ The source code is available at [github.com/VincentBellavance/cv](https://github
 
 Last updated on `r Sys.Date()`.
 
-[<i class='fas fa-download'></i> Download a PDF of this CV](https://VincentBellavance.github.io/cv/VincentBellavance.pdf)
+[<i class='fas fa-download' style="color:#FCEF7E;"></i> Download a PDF of this CV](https://VincentBellavance.github.io/cv/VincentBellavance.pdf)
 
 
 Main
