@@ -55,7 +55,7 @@ Regression, Mathematical modelling, Random Forest, Hierarchical models, Bayesian
 Programming
 ------------------------------------
 
-<span style="font-weight:600;">Data analysis</span>: R<br>
+<span style="font-weight:600;">Data analysis</span>: R, HPC<br>
 
 <span style="font-weight:600;">Database</span>: PostgreSQL<br>
 
