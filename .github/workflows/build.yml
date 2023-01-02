@@ -19,7 +19,7 @@ jobs:
           pandoc-version: '2.7.3'
       - uses: r-lib/actions/setup-r@v1
         with:
-            r-version: '3.6.0'
+            r-version: '4.2.2'
 
       - name: Python 3.6
         uses: actions/setup-python@v1
