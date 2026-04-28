@@ -13,18 +13,18 @@
 
 h1 {
   text-transform: capitalize;
-  color: #2B2D2F;
+  color: #2b2d2f;
   font-weight: 600;
 }
 
 .aside h2 {
   font-weight: 500;
   font-size: 1rem;
-  color: #FFFFFFFF;
+  color: #ffffffff;
 }
 
 .aside p {
-  color: #FFFFFFFF;
+  color: #ffffffff;
 }
 
 .aside a {
@@ -32,12 +32,12 @@ h1 {
 }
 
 .aside {
-  background-color: rgba(255, 227, 200,0);
+  background-color: rgba(255, 227, 200, 0);
   padding-top: 0px;
   padding-right: 7px;
   padding-bottom: 0px;
   padding-left: 15px;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   float: left;
   float: left;
 }
@@ -65,15 +65,15 @@ a {
 }
 
 .pagedjs_first_page {
-  --sidebar-background-color: #2B2D2F;
+  --sidebar-background-color: #2b2d2f;
   --sidebar-width: 12rem;
   --main-width: calc(var(--content-width) - var(--sidebar-width)) !important;
-  --pagedjs-margin-top: 0.9in ! important;
+  --pagedjs-margin-top: 0.9in !important;
 }
 
 .pagedjs_page {
   --pagedjs-margin-right: 0.05in !important;
-  --sidebar-background-color: #2B2D2F;
+  --sidebar-background-color: #2b2d2f;
 }
 
 #overlay {
@@ -89,26 +89,34 @@ a {
 }
 
 @-webkit-keyframes sk-rotateplane {
-  0% { -webkit-transform: perspective(120px) }
-  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
-  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+  }
 }
 
 @keyframes sk-rotateplane {
   0% {
-      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-      -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
-  } 50% {
-      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
-  } 100% {
-      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-      -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
 }
 
 .fa-gmail {
-  content: url('../assets/images/gmail.svg');
+  content: url("../assets/images/gmail.svg");
   height: 1em;
   width: auto;
 }

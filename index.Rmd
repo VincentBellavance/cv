@@ -36,8 +36,7 @@ Aside
 Contact {#contact}
 --------------------------------------------------------------------------------
 
-- <i class="fa fa-gmail"></i> <a href="mailto:Vincent.Bellavance.92@gmail.com">Vincent.Bellavance.92</a>
-- <i class="fa fa-twitter" style="color:#1DA1F2;"></i> [V_Bellavance](https://twitter.com/v_bellavance)
+- <i class="fa fa-paper-plane" style="color:#FFFFFF;" ></i> <a href="mailto:vincent.bellavance@insileco.io">vincent.bellavance@insileco.io</a>
 - <i class="fa fa-github" style="color:#FFFFFF;"></i> [VincentBellavance](https://github.com/VincentBellavance)
 <!-- - <i class="fa fa-globe"></i> -->
 <!-- - <i class="ai ai-google-scholar"></i> [Publications](https://scholar.google.com/citations?user=GyChlIoAAAAJ&hl=en)-->
@@ -48,22 +47,22 @@ Contact {#contact}
 Quantitative skills
 ------------------------------------
 
-Regression, Mathematical modelling, Random Forest, Hierarchical models, Bayesian statistics, Species distribution models
+Hierarchical models,<br>Bayesian statistics,<br>Spatio-temporal models
 
 <br>
 
 Programming
 ------------------------------------
 
-<span style="font-weight:600;">Data analysis</span>: R, HPC<br>
+<span style="font-weight:600;">Data analysis</span>: R, HPC, bash<br>
 
-<span style="font-weight:600;">Database</span>: PostgreSQL<br>
+<span style="font-weight:600;">Database</span>: PostgreSQL, DuckDB<br>
 
-<span style="font-weight:600;">Automation/reports</span>: <br>markdown, LaTeX, bash,<br> GNU make<br>
+<span style="font-weight:600;">Automation/reports</span>: <br>Quarto/R Markdown/Markdown, <br> LaTeX<br>
 
-<span style="font-weight:600;">Web</span>: HTML/CSS, ShinyApp,<br>
+<span style="font-weight:600;">Web</span>: HTML/CSS, Javascript, <br> Shiny App 
 
-<span style="font-weight:600;">DevOps (CI/CD)</span>: Git, Docker, GitHub Actions
+<span style="font-weight:600;">Reproducibility</span>: Git, GitHub Actions, Docker
 
 <br>
 
@@ -89,11 +88,19 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
- <span style="font-weight:600">Vincent Bellavance</span> <span style="font-size: 13px;">Master student</span>{#title}
+ <span style="font-weight:600">Vincent Bellavance</span> <span style="font-size: 13px;">M.Sc.</span>{#title}
 --------------------------------------------------------------------------------
 
 
-<span style="font-size: 1rem;">< <i class="fa fa-chart-bar"></i> + <i class="fa fa-robot"></i> >  Aspiring Eco-informatician | I like managing data </span>
+<span style="font-size: 1rem;">< <i class="fa fa-chart-bar"></i> + <i class="fa fa-robot"></i> >  Data scientist </span>
+
+
+Professionnal Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'professional_positions')
+```
 
 
 Education {data-icon=graduation-cap data-concise=true}
@@ -104,21 +111,13 @@ print_section(position_data, 'education')
 ```
 
 
-
-Research Experience {data-icon=laptop}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'research_positions')
-```
-
-
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ```{r}
 print_section(position_data, 'teaching_positions')
 ```
+
 
 Training {data-icon=certificate}
 --------------------------------------------------------------------------------
