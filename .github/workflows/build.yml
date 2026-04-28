@@ -1,28 +1,35 @@
 name: Build and deploy
 
 on:
-    push:
-        branches:
-        - main
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 5 1,15 * *'
 
-    schedule:
-        - cron: '0 5 1,15 * *'
-
+# Autorise l'action à écrire sur le dépôt pour publier la page
+permissions:
+  contents: write
 
 jobs:
   Build_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: r-lib/actions/setup-pandoc@v2
-        with:
-          pandoc-version: '2.7.3'
-      - uses: r-lib/actions/setup-r@v2
-        with:
-            r-version: '4.2.2'
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - name: Python 3.10.9
-        uses: actions/setup-python@v1
+      - name: Setup Pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+        with:
+          pandoc-version: '2.19' # Version plus récente suggérée
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.2.2'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10.9'
 
@@ -30,46 +37,42 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pandoc-fignos pandoc-eqnos pandoc-tablenos pandoc-secnos pandoc-xnos
-          which pandoc pandoc-fignos pandoc-eqnos pandoc-tablenos pandoc-secnos pandoc-xnos
 
       - name: Install LaTeX
         run: |
-          sudo apt-get install texlive-latex-base
-          sudo apt-get install texlive-fonts-recommended
-          sudo apt-get install texlive-fonts-extra
-          sudo apt-get install texlive-latex-extra
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
       - name: Install system dependencies
-        if: runner.os == 'Linux'
-        env:
-          RHUB_PLATFORM: linux-x86_64-ubuntu-gcc
         run: |
-          sudo apt-get install libpoppler-cpp-dev
-          sudo apt-get install libcurl4-openssl-dev
-          sudo apt-get install libglu1-mesa-dev
-          sudo apt-get install libmagick++-dev
+          sudo apt-get install -y libpoppler-cpp-dev libcurl4-openssl-dev libglu1-mesa-dev libmagick++-dev
 
       - name: Install R dependencies
-        run: Rscript -e "install.packages(c('glue', 'tidyverse', 'readr', 'rmarkdown', 'pagedown', 'rorcid', 'rcrossref'))"
+        run: |
+          install.packages(c('glue', 'tidyverse', 'readr', 'rmarkdown', 'pagedown', 'rorcid', 'rcrossref'))
+        shell: Rscript {0}
 
       - name: Build html
-        run: Rscript -e "rmarkdown::render('index.Rmd')"
         env:
           ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}
+        run: |
+          rmarkdown::render('index.Rmd')
+        shell: Rscript {0}
 
       - name: Build pdf
-        run: Rscript -e "pagedown::chrome_print(input = 'index.html', output = 'index.pdf', wait = 5)"
+        run: |
+          pagedown::chrome_print(input = 'index.html', output = 'index.pdf', wait = 5)
+        shell: Rscript {0}
 
       - name: Prepare deployment
         run: |
-          mkdir docs
+          mkdir -p docs
           mv index.html docs/index.html
-          mv index.pdf docs/VincentBellavance.pdf
-      
+          [ -f index.pdf ] && mv index.pdf docs/VincentBellavance.pdf
+
       - name: Deploy gh_pages
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: docs
-          SINGLE_COMMIT: true
+          folder: docs
+          branch: gh-pages
+          single-commit: true
